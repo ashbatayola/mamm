@@ -1,4 +1,5 @@
 import { useState } from "react";
+   import Navbar from "./components/Navbar.jsx";
 
 function App() {
   const [seats, setSeats] = useState(5);
@@ -6,10 +7,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#EEEEEE] font-sans text-[#000000]">
-      <nav className="flex items-center justify-between px-20 py-6">
-        <span className="text-3xl font-bold">Cloudline</span>
-        <span className="text-xl">Cloud storage for growing teams</span>
-      </nav>
+      <Navbar />
 
       <div className="bg-[#000000] px-20 py-12 text-[#EEEEEE]">
         <header className="mb-8">
