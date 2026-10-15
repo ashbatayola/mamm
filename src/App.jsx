@@ -69,7 +69,7 @@ function App() {
       </main>
 
       <footer className="px-20 py-8 text-center text-lg">
-        © 2026 Cloudline · Page by YOUR NAME
+        © 2026 Cloudline · Page by ASHLEE FAYE BATAYOLA
       </footer>
     </div>
   );
