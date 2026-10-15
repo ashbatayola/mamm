@@ -1,6 +1,7 @@
 import { useState } from "react";
    import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
+import Feature from "./components/Feature.jsx";
 
 function App() {
   const [seats, setSeats] = useState(5);
@@ -43,8 +44,8 @@ function App() {
           <p className="mt-2 text-xl">₱150 per seat / month</p>
           <p className="mt-1 text-xl font-bold">Total: ₱{150 * seats * months}</p>
           <ul className="mt-4 list-disc pl-6">
-            <li>50 GB storage</li>
-            <li>Email support</li>
+            <Feature text="50 GB storage" />
+            <Feature text="Email support" />
           </ul>
         </div>
         <div className="rounded-xl border-2 border-[#000000] bg-[#FFFFFF] p-6">
@@ -52,8 +53,8 @@ function App() {
           <p className="mt-2 text-xl">₱400 per seat / month</p>
           <p className="mt-1 text-xl font-bold">Total: ₱{400 * seats * months}</p>
           <ul className="mt-4 list-disc pl-6">
-            <li>1 TB storage</li>
-            <li>Chat support</li>
+            <Feature text="1 TB storage" />
+            <Feature text="Chat support" />
           </ul>
         </div>
         <div className="rounded-xl border-2 border-[#000000] bg-[#FFFFFF] p-6">
@@ -61,8 +62,8 @@ function App() {
           <p className="mt-2 text-xl">₱900 per seat / month</p>
           <p className="mt-1 text-xl font-bold">Total: ₱{900 * seats * months}</p>
           <ul className="mt-4 list-disc pl-6">
-            <li>10 TB storage</li>
-            <li>24/7 phone support</li>
+            <Feature text="10 TB storage" />
+            <Feature text="24/7 phone support" />
           </ul>
         </div>
       </main>
