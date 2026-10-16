@@ -1,7 +1,7 @@
 import { useState } from "react";
    import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
-import Feature from "./components/Feature.jsx";
+import PlanCard from "./components/PlanCard.jsx";
 
 function App() {
   const [seats, setSeats] = useState(5);
@@ -39,33 +39,14 @@ function App() {
       </div>
 
       <main className="grid grid-cols-3 gap-8 px-20 py-12">
-        <div className="rounded-xl border-2 border-[#000000] bg-[#FFFFFF] p-6">
-          <h2 className="text-2xl font-bold">Starter</h2>
-          <p className="mt-2 text-xl">₱150 per seat / month</p>
-          <p className="mt-1 text-xl font-bold">Total: ₱{150 * seats * months}</p>
-          <ul className="mt-4 list-disc pl-6">
-            <Feature text="50 GB storage" />
-            <Feature text="Email support" />
-          </ul>
-        </div>
-        <div className="rounded-xl border-2 border-[#000000] bg-[#FFFFFF] p-6">
-          <h2 className="text-2xl font-bold">Pro</h2>
-          <p className="mt-2 text-xl">₱400 per seat / month</p>
-          <p className="mt-1 text-xl font-bold">Total: ₱{400 * seats * months}</p>
-          <ul className="mt-4 list-disc pl-6">
-            <Feature text="1 TB storage" />
-            <Feature text="Chat support" />
-          </ul>
-        </div>
-        <div className="rounded-xl border-2 border-[#000000] bg-[#FFFFFF] p-6">
-          <h2 className="text-2xl font-bold">Business</h2>
-          <p className="mt-2 text-xl">₱900 per seat / month</p>
-          <p className="mt-1 text-xl font-bold">Total: ₱{900 * seats * months}</p>
-          <ul className="mt-4 list-disc pl-6">
-            <Feature text="10 TB storage" />
-            <Feature text="24/7 phone support" />
-          </ul>
-        </div>
+        <PlanCard 
+          name="Starter" 
+          price={150} storage="50 GB" 
+          support="Email" 
+          seats={seats} 
+          months={months} />
+        <PlanCard name="Pro" price={400} storage="1 TB" support="Chat" seats={seats} months={months} />
+      <PlanCard name="Business" price={900} storage="10 TB" support="24/7 phone" seats={seats} months={months} />
       </main>
 
       <Footer />
